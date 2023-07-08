@@ -11,6 +11,7 @@ namespace Walnut {
 	public:
 		static bool IsKeyDown(KeyCode keycode);
 		static bool IsMouseButtonDown(MouseButton button);
+		static float GetMouseScrollOffset();
 
 		static glm::vec2 GetMousePosition();
 

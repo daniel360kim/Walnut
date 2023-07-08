@@ -20,6 +20,12 @@ namespace Walnut {
 		return state == GLFW_PRESS;
 	}
 
+	float Input::GetMouseScrollOffset()
+	{
+		GLFWwindow* windowHandle = Application::Get().GetWindowHandle();
+		return glfwGetScrollX(windowHandle);
+	}
+
 	glm::vec2 Input::GetMousePosition()
 	{
 		GLFWwindow* windowHandle = Application::Get().GetWindowHandle();
