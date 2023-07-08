@@ -32,7 +32,9 @@ namespace Walnut {
 			m_ScrollOffset.y = (float)yOffset;
 		});
 
-		return m_ScrollOffset;
+		glm::vec2 offset = m_ScrollOffset;
+		m_ScrollOffset = glm::vec2(0.0f);
+		return offset;
 	}
 
 	glm::vec2 Input::GetMousePosition()
