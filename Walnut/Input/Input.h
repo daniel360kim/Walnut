@@ -16,6 +16,8 @@ namespace Walnut {
 		static glm::vec2 GetMousePosition();
 
 		static void SetCursorMode(CursorMode mode);
+	private:
+		static float s_ScrollOffset;
 	};
 
 }
