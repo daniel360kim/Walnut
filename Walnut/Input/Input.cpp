@@ -6,7 +6,7 @@
 
 namespace Walnut {
 
-	float Input::s_ScrollOffset = 0.0f;
+	glm::vec2 Input::m_ScrollOffset = glm::vec2(0.0f);
 
 	bool Input::IsKeyDown(KeyCode keycode)
 	{
@@ -22,17 +22,17 @@ namespace Walnut {
 		return state == GLFW_PRESS;
 	}
 
-	float Input::GetMouseScrollOffset()
+	glm::vec2 Input::GetMouseScrollOffset()
 	{
 		GLFWwindow* windowHandle = Application::Get().GetWindowHandle();
+
 		glfwSetScrollCallback(windowHandle, [](GLFWwindow* window, double xOffset, double yOffset)
 		{
-			s_ScrollOffset = (float)yOffset;
+			m_ScrollOffset.x = (float)xOffset;
+			m_ScrollOffset.y = (float)yOffset;
 		});
 
-		float offset = s_ScrollOffset;
-		s_ScrollOffset = 0.0f;
-		return offset;
+		return m_ScrollOffset;
 	}
 
 	glm::vec2 Input::GetMousePosition()
