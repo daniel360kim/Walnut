@@ -1,4 +1,5 @@
 #include "Application.h"
+#include "Enable.h"
 
 //
 // Adapted from Dear ImGui Vulkan example
@@ -19,7 +20,9 @@
 // Emedded font
 #include "ImGui/Roboto-Regular.embed"
 
+#if WALNUT_ENABLE
 extern bool g_ApplicationRunning;
+#endif
 
 // [Win32] Our example includes a copy of glfw3.lib pre-compiled with VS2010 to maximize ease of testing and compatibility with old VS compilers.
 // To link with VS2010-era libraries, VS2015+ requires linking with legacy_stdio_definitions.lib, which we do using this pragma.
@@ -548,7 +551,9 @@ namespace Walnut {
 		glfwDestroyWindow(m_WindowHandle);
 		glfwTerminate();
 
+		#if WALNUT_ENABLE
 		g_ApplicationRunning = false;
+		#endif
 	}
 
 	void Application::Run()

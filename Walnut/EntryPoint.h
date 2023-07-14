@@ -1,5 +1,8 @@
 #pragma once
 
+#include "Enable.h"
+
+#if WALNUT_ENABLE
 #ifdef WL_PLATFORM_WINDOWS
 
 extern Walnut::Application* Walnut::CreateApplication(int argc, char** argv);
@@ -40,3 +43,5 @@ int main(int argc, char** argv)
 #endif // WL_DIST
 
 #endif // WL_PLATFORM_WINDOWS
+
+#endif // WALNUT_ENABLE
