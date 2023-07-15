@@ -488,8 +488,13 @@ namespace Walnut {
 		// Load default font
 		ImFontConfig fontConfig;
 		fontConfig.FontDataOwnedByAtlas = false;
-		ImFont* robotoFont = io.Fonts->AddFontFromMemoryTTF((void*)g_RobotoRegular, sizeof(g_RobotoRegular), 20.0f, &fontConfig);
+		ImFont* robotoFont = io.Fonts->AddFontFromFileTTF("../../Resources/Fonts/Inter/Inter-Regular.ttf", 20.0f, &fontConfig);
 		io.FontDefault = robotoFont;
+
+		ImFont* TitleScreenFont = io.Fonts->AddFontFromFileTTF("../../Resources/Fonts/Inter/Inter-ExtraBold.ttf", 250.0f);
+
+		m_Fonts.push_back(robotoFont);
+		m_Fonts.push_back(TitleScreenFont);
 
 		// Upload Fonts
 		{
@@ -600,6 +605,7 @@ namespace Walnut {
 			ImGui_ImplVulkan_NewFrame();
 			ImGui_ImplGlfw_NewFrame();
 			ImGui::NewFrame();
+
 
 			{
 				static ImGuiDockNodeFlags dockspace_flags = ImGuiDockNodeFlags_None;

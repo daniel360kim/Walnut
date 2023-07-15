@@ -45,6 +45,8 @@ namespace Walnut {
 
 		void Close();
 
+		std::vector<ImFont*>& GetFonts() { return m_Fonts; }
+
 		float GetTime();
 		GLFWwindow* GetWindowHandle() const { return m_WindowHandle; }
 
@@ -69,6 +71,7 @@ namespace Walnut {
 		float m_LastFrameTime = 0.0f;
 
 		std::vector<std::shared_ptr<Layer>> m_LayerStack;
+		std::vector<ImFont*> m_Fonts;
 		std::function<void()> m_MenubarCallback;
 	};
 
