@@ -492,9 +492,15 @@ namespace Walnut {
 		io.FontDefault = robotoFont;
 
 		ImFont* TitleScreenFont = io.Fonts->AddFontFromFileTTF("../../Resources/Fonts/Inter/Inter-ExtraBold.ttf", 250.0f);
+		ImFont* OrbitViewerHeading = io.Fonts->AddFontFromFileTTF("../../Resources/Fonts/Inter/Inter-Bold.ttf", 40.0f);
+		ImFont* OrbitViewerSubheading = io.Fonts->AddFontFromFileTTF("../../Resources/Fonts/Inter/Inter-Bold.ttf", 30.0f);
+		ImFont* OrbitViewerText = io.Fonts->AddFontFromFileTTF("../../Resources/Fonts/Inter/Inter-Regular.ttf", 20.0f);
 
 		m_Fonts.push_back(robotoFont);
 		m_Fonts.push_back(TitleScreenFont);
+		m_Fonts.push_back(OrbitViewerHeading);
+		m_Fonts.push_back(OrbitViewerSubheading);
+		m_Fonts.push_back(OrbitViewerText);
 
 		// Upload Fonts
 		{
