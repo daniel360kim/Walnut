@@ -492,15 +492,19 @@ namespace Walnut {
 		io.FontDefault = robotoFont;
 
 		ImFont* TitleScreenFont = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-ExtraBold.ttf", 250.0f);
-		ImFont* OrbitViewerHeading = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Bold.ttf", 40.0f);
-		ImFont* OrbitViewerSubheading = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Bold.ttf", 30.0f);
-		ImFont* OrbitViewerText = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Regular.ttf", 20.0f);
+		ImFont* EarthOrbitViewerHeading = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Bold.ttf", 40.0f);
+		ImFont* EarthOrbitViewerSubheading = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Bold.ttf", 30.0f);
+		ImFont* EarthOrbitViewerText = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Regular.ttf", 20.0f);
+		ImFont* TableHeadingText = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Bold.ttf", 20.0f);
+		ImFont* SearchBarFont = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Bold.ttf", 25.0f);
 
 		m_Fonts.push_back(robotoFont);
 		m_Fonts.push_back(TitleScreenFont);
-		m_Fonts.push_back(OrbitViewerHeading);
-		m_Fonts.push_back(OrbitViewerSubheading);
-		m_Fonts.push_back(OrbitViewerText);
+		m_Fonts.push_back(EarthOrbitViewerHeading);
+		m_Fonts.push_back(EarthOrbitViewerSubheading);
+		m_Fonts.push_back(EarthOrbitViewerText);
+		m_Fonts.push_back(TableHeadingText);
+		m_Fonts.push_back(SearchBarFont);
 
 		// Upload Fonts
 		{
