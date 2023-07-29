@@ -488,15 +488,15 @@ namespace Walnut {
 		// Load default font
 		ImFontConfig fontConfig;
 		fontConfig.FontDataOwnedByAtlas = false;
-		ImFont* robotoFont = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Regular.ttf", 20.0f, &fontConfig);
+		ImFont* robotoFont = io.Fonts->AddFontFromFileTTF("assets/Fonts/Inter/Inter-Regular.ttf", 20.0f, &fontConfig);
 		io.FontDefault = robotoFont;
 
-		ImFont* TitleScreenFont = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-ExtraBold.ttf", 250.0f);
-		ImFont* EarthOrbitViewerHeading = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Bold.ttf", 40.0f);
-		ImFont* EarthOrbitViewerSubheading = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Bold.ttf", 30.0f);
-		ImFont* EarthOrbitViewerText = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Regular.ttf", 20.0f);
-		ImFont* TableHeadingText = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Bold.ttf", 20.0f);
-		ImFont* SearchBarFont = io.Fonts->AddFontFromFileTTF("../../assets/Fonts/Inter/Inter-Bold.ttf", 25.0f);
+		ImFont* TitleScreenFont = io.Fonts->AddFontFromFileTTF("assets/Fonts/Inter/Inter-ExtraBold.ttf", 250.0f);
+		ImFont* EarthOrbitViewerHeading = io.Fonts->AddFontFromFileTTF("assets/Fonts/Inter/Inter-Bold.ttf", 40.0f);
+		ImFont* EarthOrbitViewerSubheading = io.Fonts->AddFontFromFileTTF("assets/Fonts/Inter/Inter-Bold.ttf", 30.0f);
+		ImFont* EarthOrbitViewerText = io.Fonts->AddFontFromFileTTF("assets/Fonts/Inter/Inter-Regular.ttf", 20.0f);
+		ImFont* TableHeadingText = io.Fonts->AddFontFromFileTTF("assets/Fonts/Inter/Inter-Bold.ttf", 20.0f);
+		ImFont* SearchBarFont = io.Fonts->AddFontFromFileTTF("assets/Fonts/Inter/Inter-Bold.ttf", 25.0f);
 
 		m_Fonts.push_back(robotoFont);
 		m_Fonts.push_back(TitleScreenFont);
@@ -614,6 +614,8 @@ namespace Walnut {
 			// Start the Dear ImGui frame
 			ImGui_ImplVulkan_NewFrame();
 			ImGui_ImplGlfw_NewFrame();
+
+
 			ImGui::NewFrame();
 
 
